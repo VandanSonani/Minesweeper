@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="Init backend">
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/pom.xml" afterDir="false" />
+    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="initialize classes and create test for gameboard">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,14 +48,20 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="2qS69dApLOl3NJ4gJz3j7YoLJOc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.minesweeper-backend [exec:java].executor": "Run",
+    "Maven.minesweeper-backend [spring-boot:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -58,9 +73,24 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.minesweeperbackend.gameplay" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn exec:java" />
+      <command value="mvn spring-boot:run" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Minesweeper" />
@@ -150,7 +180,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734643478423</updated>
-      <workItem from="1734643479477" duration="836000" />
+      <workItem from="1734643479477" duration="3587000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
@@ -160,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734644138376</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initialize classes and create test for gameboard">
+      <option name="closed" value="true" />
+      <created>1734645190859</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734645190859</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +217,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init backend" />
+    <MESSAGE value="initialize classes and create test for gameboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialize classes and create test for gameboard" />
   </component>
 </project>
