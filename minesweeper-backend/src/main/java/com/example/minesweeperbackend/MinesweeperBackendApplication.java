@@ -9,8 +9,8 @@ public class MinesweeperBackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MinesweeperBackendApplication.class, args);
-
-        Gameboard.createGameBoard(10, 10, 10);
+        Gameboard gameboard = new Gameboard(10, 10, 10);
+        gameboard.printGameboard();
     }
 
 }
