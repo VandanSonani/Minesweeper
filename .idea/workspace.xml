@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="Gameboard test">
+    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="Gameboard + name + bomb placement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/test/java/com/example/minesweeperbackend/gameplay/GameboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/test/java/com/example/minesweeperbackend/gameplay/GameboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +61,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Maven.back-end [spring-boot:run].executor": "Run",
+    "Maven.back-end [test].executor": "Run",
     "Maven.minesweeper-backend [exec:java].executor": "Run",
     "Maven.minesweeper-backend [spring-boot:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -94,6 +94,7 @@
     <option name="myCommands">
       <command value="mvn exec:java" />
       <command value="mvn spring-boot:run" />
+      <command value="mvn test" />
     </option>
   </component>
   <component name="RunManager">
@@ -185,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734643478423</updated>
-      <workItem from="1734643479477" duration="9356000" />
+      <workItem from="1734643479477" duration="10506000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
@@ -211,7 +212,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734729875315</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Gameboard + name + bomb placement">
+      <option name="closed" value="true" />
+      <created>1734799568477</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734799568477</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Gameboard + name + bomb placement">
+      <option name="closed" value="true" />
+      <created>1734799712573</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734799712573</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +249,7 @@
     <MESSAGE value="Init backend" />
     <MESSAGE value="initialize classes and create test for gameboard" />
     <MESSAGE value="Gameboard test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gameboard test" />
+    <MESSAGE value="Gameboard + name + bomb placement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gameboard + name + bomb placement" />
   </component>
 </project>
