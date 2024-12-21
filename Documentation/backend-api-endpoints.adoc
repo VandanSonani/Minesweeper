@@ -1,0 +1,28 @@
+
+= API Endpoints
+== (Authentication)
+Using Spring Security with JWT tokens for user authentication.
+
+- `POST /api/auth/register`
+** Register a new user
+- `POST /api/auth/login`
+** Returns a JWT token for the user
+
+== Leaderboard System
+- `GET /api/leaderboard`
+** Get all players for leaderboard positions
+- `GET /api/leaderboard/user/+{userId}+`
+** Get leaderboard position for a specific user
+
+== Game System
+
+- `GET /api/main/start`
+** Start a main game for a chance at the leaderboard position
+- `POST /api/main/submit`
+** Submit a main game for leaderboard position
+
+== Seeded boards for MAIN games:
+- `POST /api/admin/seed-board/+{seed}+`
+** Seed a board for a main game
+- `GET /api/admin/seed-board/`
+** Get the specific seed of a board
