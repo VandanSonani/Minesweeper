@@ -1,0 +1,85 @@
+Index: minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.minesweeperbackend.gameplay;\n\nimport java.sql.SQLOutput;\n\npublic class Gameboard {\n    // flags, bombs, board, rows, columns\n\n    int bombs = 5;\n\n    int rows;\n    int columns;\n\n    public void createGameBoard(int rows, int columns, int bombs) {\n        for (int i = 0; i < rows; i++) {\n            for (int j = 0; j < columns; j++) {\n                System.out.println(\" # \");\n            }\n            System.out.println(\"\\n\");\n        }\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java b/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java
+--- a/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java	(revision c23c4bea3a1a645d9294d6996a68620ccc1922e7)
++++ b/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java	(date 1734731207984)
+@@ -18,4 +18,7 @@
+             System.out.println("\n");
+         }
+     }
++
++
++
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"3f040c4b-cf88-4aa9-a615-ba572858341d\" name=\"Changes\" comment=\"initialize classes and create test for gameboard\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n        <option value=\"JUnit5 Test Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\n  \"lastFilter\": {\n    \"state\": \"OPEN\",\n    \"assignee\": \"VandanSonani\"\n  }\n}]]></component>\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\n  \"selectedUrlAndAccountId\": {\n    \"url\": \"https://github.com/VandanSonani/Minesweeper.git\",\n    \"accountId\": \"4e17dc2d-f862-4834-9940-ec975e287cb4\"\n  }\n}]]></component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectColorInfo\"><![CDATA[{\n  \"associatedIndex\": 6\n}]]></component>\n  <component name=\"ProjectId\" id=\"2qS69dApLOl3NJ4gJz3j7YoLJOc\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Maven.minesweeper-backend [exec:java].executor\": \"Run\",\n    \"Maven.minesweeper-backend [spring-boot:run].executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary\": \"JUnit5\",\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5\": \"\",\n    \"git-widget-placeholder\": \"main\",\n    \"jdk.selected.JAVA_MODULE\": \"17\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"/Users/vandan/Desktop/CS 342/Minesweeper\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"project.structure.last.edited\": \"Modules\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.repository.indices\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateTestDialog.Recents.Supers\">\n      <recent name=\"\" />\n    </key>\n    <key name=\"CreateTestDialog.RecentsKey\">\n      <recent name=\"com.example.minesweeperbackend.gameplay\" />\n    </key>\n  </component>\n  <component name=\"RunAnythingCache\">\n    <option name=\"myCommands\">\n      <command value=\"mvn exec:java\" />\n      <command value=\"mvn spring-boot:run\" />\n    </option>\n  </component>\n  <component name=\"RunManager\">\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\n      <module name=\"Minesweeper\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\n      <module name=\"Minesweeper\" />\n      <option name=\"filePath\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"PythonConfigurationType\" factoryName=\"Python\">\n      <module name=\"Minesweeper\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration default=\"true\" type=\"Python.FlaskServer\">\n      <module name=\"Minesweeper\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"MinesweeperBackendApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\n      <option name=\"FRAME_DEACTIVATION_UPDATE_POLICY\" value=\"UpdateClassesAndResources\" />\n      <module name=\"minesweeper-backend\" />\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.example.minesweeperbackend.MinesweeperBackendApplication\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"Tox\" factoryName=\"Tox\">\n      <module name=\"Minesweeper\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.24807.4\" />\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.24807.4\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"3f040c4b-cf88-4aa9-a615-ba572858341d\" name=\"Changes\" comment=\"Init backend\" />\n      <created>1734643478423</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1734643478423</updated>\n      <workItem from=\"1734643479477\" duration=\"3587000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Init backend\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1734644138376</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1734644138376</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"initialize classes and create test for gameboard\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1734645190859</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1734645190859</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"3\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Init backend\" />\n    <MESSAGE value=\"initialize classes and create test for gameboard\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"initialize classes and create test for gameboard\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c23c4bea3a1a645d9294d6996a68620ccc1922e7)
++++ b/.idea/workspace.xml	(date 1734731208041)
+@@ -4,9 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="initialize classes and create test for gameboard">
++    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="Gameboard test">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -43,6 +42,9 @@
+         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+       </MavenGeneralSettings>
+     </option>
++  </component>
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+   </component>
+   <component name="ProjectColorInfo"><![CDATA[{
+   "associatedIndex": 6
+@@ -180,7 +182,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1734643478423</updated>
+-      <workItem from="1734643479477" duration="3587000" />
++      <workItem from="1734643479477" duration="4935000" />
+     </task>
+     <task id="LOCAL-00001" summary="Init backend">
+       <option name="closed" value="true" />
+@@ -198,7 +200,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1734645190859</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Gameboard test">
++      <option name="closed" value="true" />
++      <created>1734729875315</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1734729875315</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -218,6 +228,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Init backend" />
+     <MESSAGE value="initialize classes and create test for gameboard" />
+-    <option name="LAST_COMMIT_MESSAGE" value="initialize classes and create test for gameboard" />
++    <MESSAGE value="Gameboard test" />
++    <option name="LAST_COMMIT_MESSAGE" value="Gameboard test" />
+   </component>
+ </project>
+\ No newline at end of file
