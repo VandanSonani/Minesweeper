@@ -1,5 +1,4 @@
-package com.example.minesweeperbackend.gameplay;
-
+package com.example.minesweeperbackend.Gameplay;
 public class MinesweeperGameplay {
 // clicking placing flags and revealing cells
     Player player;
