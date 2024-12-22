@@ -1,4 +1,4 @@
-package com.example.minesweeperbackend.Gameplay;
+package com.example.minesweeperbackend.gameplay;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,22 +10,18 @@ class GameboardTest {
         Gameboard gameboard = new Gameboard(10, 10, 10);
         assertEquals(10, gameboard.rows);
         assertEquals(10, gameboard.columns);
-        assertEquals(10, gameboard.bombsCount);
+        assertEquals(10, gameboard.bombs);
     }
 
     @Test
     void testPrintGameboard() {
         Gameboard gameboard = new Gameboard(2, 2, 1);
-        gameboard.placeBombs();
+        gameboard.printGameboard();
     }
 
-    // TODO, finish tests
+    // TODO this:
+
     // Test for bomb placement
-
-    @Test
-    void testBombPlacement() {
-        Gameboard gameboard = new Gameboard(10, 10, 10);
-    }
 
     // Test for bomb count
 

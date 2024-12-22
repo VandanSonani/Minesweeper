@@ -1,4 +1,4 @@
-package com.example.minesweeperbackend.gameplay;
+package com.example.minesweeperbackend.Gameplay;
 
 public class Gameboard {
     int bombsCount;

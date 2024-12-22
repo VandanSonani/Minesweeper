@@ -1,8 +1,9 @@
-package com.example.minesweeperbackend.gameplay;
+package com.example.minesweeperbackend.Gameplay;
 
 public class Player {
-    private String name;
-    private Gameboard board;
+    private final String name;
+    // fixme might not be final because might need to be changed later
+    private final Gameboard board = new Gameboard(10, 10, 10);
 
     public Player(String name) {
         this.name = name;
@@ -15,10 +16,4 @@ public class Player {
     public Gameboard getGameboard() {
         return board;
     }
-
-    public void setGameboard(Gameboard board) {
-        this.board = board;
-    }
-
-//    name, board
 }
