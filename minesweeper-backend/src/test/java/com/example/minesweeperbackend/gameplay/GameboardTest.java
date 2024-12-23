@@ -1,5 +1,6 @@
 package com.example.minesweeperbackend.Gameplay;
 
+import com.example.minesweeperbackend.gameplay.Gameboard;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

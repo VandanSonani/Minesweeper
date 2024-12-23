@@ -3,17 +3,29 @@ package com.example.minesweeperbackend.gameplay;
 import java.util.Arrays;
 
 public class Gameboard {
-    int bombsCount;
-    int rows;
-    int columns;
+    private int bombsCount;
+    private int rows;
+    private int columns;
     String[][] gameboard;
 
 
-    public Gameboard(int rows, int columns, int bombs) {
+    private Gameboard(int rows, int columns, int bombs) {
         this.rows = rows;
         this.columns = columns;
         this.bombsCount = bombs;
         gameboard = new String[rows][columns];
+    }
+
+    public void getRows(){
+
+    }
+
+    public void getColumns(){
+
+    }
+
+    public void getBombsCount(){
+        gameboard.
     }
 
 
@@ -50,6 +62,20 @@ public class Gameboard {
         printGameboard();
     }
 
+    public void placeFlag(int x, int y){
+        boolean[][] flag = new boolean[rows][columns];
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                if (gameboard[i][j].equals("#")) {
+                    gameboard[i][j] = "F";
+                    flag[i][j] = true;
+                    break;
+                }
+            }
+        }
+        printGameboard();
+    }
+
 //    revealCell(boolean[][] bombLocations, int row, int column) {
 //        // if bomb, game over
 //        if (bombLocations[row][column]) {
@@ -63,6 +89,7 @@ public class Gameboard {
 //        // if number, reveal number
 //        // if empty, reveal empty
 //    }
+
 
     public void printGameboard() {
         System.out.println("Gameboard:");
