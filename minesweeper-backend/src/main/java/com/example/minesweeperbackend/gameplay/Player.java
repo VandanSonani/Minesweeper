@@ -1,4 +1,4 @@
-package com.example.minesweeperbackend.Gameplay;
+package com.example.minesweeperbackend.gameplay;
 
 public class Player {
     private final String name;
