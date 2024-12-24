@@ -9,23 +9,27 @@ public class Gameboard {
     String[][] gameboard;
 
 
-    private Gameboard(int rows, int columns, int bombs) {
+    public Gameboard(int rows, int columns, int bombs) {
         this.rows = rows;
         this.columns = columns;
         this.bombsCount = bombs;
         gameboard = new String[rows][columns];
     }
 
-    public void getRows(){
-
+    public int getRows(){
+        return rows;
     }
 
-    public void getColumns(){
-
+    public int getColumns(){
+        return columns;
     }
 
-    public void getBombsCount(){
-        gameboard.
+    public int getBombsCount(){
+        return bombsCount;
+    }
+
+    public String[][] getGameboard(){
+        return gameboard;
     }
 
 
@@ -62,33 +66,75 @@ public class Gameboard {
         printGameboard();
     }
 
-    public void placeFlag(int x, int y){
-        boolean[][] flag = new boolean[rows][columns];
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                if (gameboard[i][j].equals("#")) {
-                    gameboard[i][j] = "F";
-                    flag[i][j] = true;
-                    break;
+    //TODO handle flag on frontend
+//    public void placeFlag(int x, int y){
+//        boolean[][] flag = new boolean[rows][columns];
+//        for (int i = 0; i < x; i++) {
+//            for (int j = 0; j < y; j++) {
+//                if (gameboard[i][j].equals("#")) {
+//                    gameboard[i][j] = "F";
+//                    flag[i][j] = true;
+//                    break;
+//                }
+//                if(gameboard[i][j].equals('F')){
+//
+//                }
+//            }
+//        }
+//        printGameboard();
+//    }
+
+    public int checkAdjacentCells(int row, int column) {
+        int count = 0;
+        for (int i = row - 1; i <= row + 1; i++) {
+            for (int j = column - 1; j <= column + 1; j++) {
+                if (i >= 0 && i < rows && j >= 0 && j < columns) {
+                    if (gameboard[i][j].equals("B")) {
+                        count++;
+                    }
                 }
             }
         }
-        printGameboard();
+        return count;
     }
 
-//    revealCell(boolean[][] bombLocations, int row, int column) {
-//        // if bomb, game over
-//        if (bombLocations[row][column]) {
-//            System.out.println("Game Over");
-//            return;
-//        }
-//        else if (bombLocations[row][column] != true ) {
-//            System.out.println("Game Over");
-//            return;
-//        }
-//        // if number, reveal number
-//        // if empty, reveal empty
-//    }
+    public void revealCell(int row, int column) {
+        // Check for out-of-bounds
+        if (row < 0 || row >= rows || column < 0 || column >= columns) {
+            return;
+        }
+
+        // if bomb, game over
+        if (gameboard[row][column].equals("B")) {
+            System.out.println("Game Over");
+            return;
+        }
+
+        if (gameboard[row][column].equals("#")) {
+            // check if there are bombs around
+            int nearBombCount = checkAdjacentCells(row, column);
+            // if there are bombs around it then reveal number
+            if (nearBombCount > 0) {
+                gameboard[row][column] = String.valueOf(nearBombCount);
+            } else {
+                // mark as revealed
+                gameboard[row][column] = "E";
+                // recursively reveal all adjacent cells
+                int[] dRow = {-1, -1, -1, 0, 0, 1, 1, 1};
+                int[] dCol = {-1, 0, 1, -1, 1, -1, 0, 1};
+
+                for (int i = 0; i < 8; i++) {
+                    revealCell(row + dRow[i], column + dCol[i]);
+                }
+
+            }
+        }
+
+    }
+
+        // if number, reveal number
+        // if empty, reveal empty
+
 
 
     public void printGameboard() {

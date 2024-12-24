@@ -13,9 +13,10 @@ public class MinesweeperBackendApplication {
 
         Player player = new Player("John");
         System.out.println(player.getName() + "'s gameboard");
-        Gameboard gameboard = new Gameboard(10, 10, 10);
+        Gameboard gameboard = new Gameboard(15, 15, 40);
         gameboard.placeBombs();
-
+        gameboard.revealCell(3,3);
+        gameboard.printGameboard();
     }
 
 }
