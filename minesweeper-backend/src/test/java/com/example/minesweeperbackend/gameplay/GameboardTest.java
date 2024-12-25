@@ -9,9 +9,9 @@ class GameboardTest {
     @Test
     void testGameboardInitialization() {
         Gameboard gameboard = new Gameboard(10, 10, 10);
-        assertEquals(10, gameboard.rows);
-        assertEquals(10, gameboard.columns);
-        assertEquals(10, gameboard.bombsCount);
+        assertEquals(10, gameboard.getRows());
+        assertEquals(10, gameboard.getColumns());
+        assertEquals(10, gameboard.getBombsCount());
     }
 
     @Test
