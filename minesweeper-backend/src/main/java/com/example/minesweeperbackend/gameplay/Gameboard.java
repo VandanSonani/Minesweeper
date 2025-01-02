@@ -1,6 +1,7 @@
 package com.example.minesweeperbackend.gameplay;
 
 import java.util.Arrays;
+import java.util.Optional;
 
 public class Gameboard {
     private int bombsCount;

@@ -30,6 +30,13 @@ class GameboardTest {
 
     // Test for bomb count
 
+    @Test
+    public void testBombCount() {
+        Gameboard gameboard = new Gameboard(10, 10, 10);
+        gameboard.placeBombs();
+        assertEquals(10, gameboard.getBombsCount());
+    }
+
     // Test for flag placement
 
     // Test for flag count
