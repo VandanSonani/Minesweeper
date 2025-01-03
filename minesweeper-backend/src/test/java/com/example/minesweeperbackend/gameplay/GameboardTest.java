@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class GameboardTest {
 
     @Test
-    void testGameboardInitialization() {
+    public void testGameboardInitialization() {
         Gameboard gameboard = new Gameboard(10, 10, 10);
         assertEquals(10, gameboard.getRows());
         assertEquals(10, gameboard.getColumns());
@@ -15,37 +15,46 @@ class GameboardTest {
     }
 
     @Test
-    void testPrintGameboard() {
+    public void testPrintGameboard() {
         Gameboard gameboard = new Gameboard(2, 2, 1);
         gameboard.placeBombs();
     }
 
     // TODO, finish tests
-    // Test for bomb placement
+    // Test for bomb placement & bomb count
 
     @Test
-    void testBombPlacement() {
-        Gameboard gameboard = new Gameboard(10, 10, 10);
-    }
-
-    // Test for bomb count
-
-    @Test
-    public void testBombCount() {
-        Gameboard gameboard = new Gameboard(10, 10, 10);
+    public void testBombPlacement() {
+        Gameboard gameboard = new Gameboard(6, 6, 3);
         gameboard.placeBombs();
-        assertEquals(10, gameboard.getBombsCount());
+        int bombCount = 0;
+        for (int i = 0; i < gameboard.getRows(); i++) {
+            for (int j = 0; j < gameboard.getColumns(); j++) {
+                if (gameboard.getGameboard()[i][j] == "B") {
+                    bombCount++;
+                }
+            }
+        }
+        assertEquals(3, bombCount);
     }
 
-    // Test for flag placement
+    // test board size
+    @Test
+    public void testBoardSize() {
+        Gameboard gameboard = new Gameboard(6, 6, 3);
+        assertEquals(6, gameboard.getRows());
+        assertEquals(6, gameboard.getColumns());
+    }
 
-    // Test for flag count
+    // Test for flag placement - front end
 
-    // Test for board click
+    // Test for flag count - front end
 
-    // Test for board click on a bomb
+    // Test for board click - front end
 
-    // Test to not allow board click on a flag
+    // Test for board click on a bomb - front end
+
+    // Test to not allow board click on a flag - front end
 
     // Test for board click on a number cell
 
