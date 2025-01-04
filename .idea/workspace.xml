@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="Gameboard + name + bomb placement">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_20_24,_3_46 PM_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/test/java/com/example/minesweeperbackend/Gameplay/GameboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/test/java/com/example/minesweeperbackend/Gameplay/GameboardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/test/java/com/example/minesweeperbackend/gameplay/GameboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/test/java/com/example/minesweeperbackend/gameplay/GameboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +30,12 @@
     &quot;assignee&quot;: &quot;VandanSonani&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/VandanSonani/Minesweeper",
-    "accountId": "4e17dc2d-f862-4834-9940-ec975e287cb4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/VandanSonani/Minesweeper&quot;,
+    &quot;accountId&quot;: &quot;4e17dc2d-f862-4834-9940-ec975e287cb4&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -61,6 +59,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.GameboardTest.testBoardClickOnEmptyCell.executor": "Run",
+    "JUnit.GameboardTest.testBoardClickOnNumberCell.executor": "Run",
+    "JUnit.GameboardTest.testClickOnAlreadyRevealedCell.executor": "Run",
     "Maven.back-end [spring-boot:run].executor": "Run",
     "Maven.back-end [test].executor": "Run",
     "Maven.minesweeper-backend [exec:java].executor": "Run",
@@ -99,7 +100,70 @@
       <command value="mvn spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.GameboardTest">
+    <configuration name="GameboardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.minesweeperbackend.Gameplay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.minesweeperbackend.Gameplay" />
+      <option name="MAIN_CLASS_NAME" value="com.example.minesweeperbackend.Gameplay.GameboardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameboardTest.testBoardClickOnEmptyCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.minesweeperbackend.Gameplay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.minesweeperbackend.Gameplay" />
+      <option name="MAIN_CLASS_NAME" value="com.example.minesweeperbackend.Gameplay.GameboardTest" />
+      <option name="METHOD_NAME" value="testBoardClickOnEmptyCell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameboardTest.testBoardClickOnNumberCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.minesweeperbackend.Gameplay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.minesweeperbackend.Gameplay" />
+      <option name="MAIN_CLASS_NAME" value="com.example.minesweeperbackend.Gameplay.GameboardTest" />
+      <option name="METHOD_NAME" value="testBoardClickOnNumberCell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameboardTest.testClickOnAlreadyRevealedCell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.minesweeperbackend.Gameplay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.minesweeperbackend.Gameplay" />
+      <option name="MAIN_CLASS_NAME" value="com.example.minesweeperbackend.Gameplay.GameboardTest" />
+      <option name="METHOD_NAME" value="testClickOnAlreadyRevealedCell" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Minesweeper" />
       <method v="2">
@@ -171,6 +235,14 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GameboardTest" />
+        <item itemvalue="JUnit.GameboardTest.testBoardClickOnNumberCell" />
+        <item itemvalue="JUnit.GameboardTest.testBoardClickOnEmptyCell" />
+        <item itemvalue="JUnit.GameboardTest.testClickOnAlreadyRevealedCell" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -190,6 +262,7 @@
       <updated>1734643478423</updated>
       <workItem from="1734643479477" duration="10506000" />
       <workItem from="1735857042385" duration="790000" />
+      <workItem from="1736032463777" duration="450000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
