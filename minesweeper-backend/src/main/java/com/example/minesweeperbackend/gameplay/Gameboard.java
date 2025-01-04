@@ -2,6 +2,8 @@ package com.example.minesweeperbackend.gameplay;
 
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.Random;
+
 
 public class Gameboard {
     private int bombsCount;
@@ -41,14 +43,21 @@ public class Gameboard {
     // Math.random to generate random numbers
     //print board in bomb
 
-    public void placeBombs() {
+    public void placeBombs(Optional<Integer> seed) {
         boolean[][] bombLocations = new boolean[rows][columns];
+        Random random;
+
+        if (seed.isPresent()) {
+            random = new Random(seed.get());
+        } else {
+            random = new Random();
+        }
 
         for (int i = 0; i < bombsCount; i++) {
             int row, column;
             do {
-                row = (int) (Math.random() * rows);
-                column = (int) (Math.random() * columns);
+                row = random.nextInt(rows);
+                column = random.nextInt(columns);
             } while (bombLocations[row][column]);
 
             bombLocations[row][column] = true;
@@ -66,6 +75,8 @@ public class Gameboard {
 
         printGameboard();
     }
+
+
 
     //TODO handle flag on frontend
 //    public void placeFlag(int x, int y){

@@ -5,6 +5,8 @@ import com.example.minesweeperbackend.gameplay.Player;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Optional;
+
 @SpringBootApplication
 public class MinesweeperBackendApplication {
 
@@ -14,7 +16,7 @@ public class MinesweeperBackendApplication {
         Player player = new Player("John");
         System.out.println(player.getName() + "'s gameboard");
         Gameboard gameboard = new Gameboard(15, 15, 40);
-        gameboard.placeBombs();
+        gameboard.placeBombs(Optional.empty());
         gameboard.revealCell(3,3);
         gameboard.printGameboard();
     }

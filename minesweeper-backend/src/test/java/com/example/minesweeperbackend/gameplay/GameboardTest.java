@@ -2,6 +2,9 @@ package com.example.minesweeperbackend.Gameplay;
 
 import com.example.minesweeperbackend.gameplay.Gameboard;
 import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameboardTest {
@@ -17,7 +20,7 @@ class GameboardTest {
     @Test
     public void testPrintGameboard() {
         Gameboard gameboard = new Gameboard(2, 2, 1);
-        gameboard.placeBombs();
+        gameboard.placeBombs(Optional.empty());
     }
 
     // TODO, finish tests
@@ -26,7 +29,7 @@ class GameboardTest {
     @Test
     public void testBombPlacement() {
         Gameboard gameboard = new Gameboard(6, 6, 3);
-        gameboard.placeBombs();
+        gameboard.placeBombs(Optional.empty());
         int bombCount = 0;
         for (int i = 0; i < gameboard.getRows(); i++) {
             for (int j = 0; j < gameboard.getColumns(); j++) {
@@ -63,5 +66,14 @@ class GameboardTest {
     // Test for click on a already revealed cell
 
     // Test to not allow flag on a already revealed cell
+
+    // Test for clicking bombs
+    @Test
+    public void testClickingBombs() {
+        Gameboard gameboard = new Gameboard(15, 15, 40);
+        gameboard.placeBombs(Optional.of(12345));
+        gameboard.revealCell(0, 4);
+        assertEquals("B", gameboard.getGameboard()[0][4]);
+    }
 
 }
