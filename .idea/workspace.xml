@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="Gameboard + name + bomb placement">
+    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="Test cases added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/test/java/com/example/minesweeperbackend/gameplay/GameboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/test/java/com/example/minesweeperbackend/gameplay/GameboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +58,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.GameboardTest.executor": "Run",
     "JUnit.GameboardTest.testBoardClickOnEmptyCell.executor": "Run",
     "JUnit.GameboardTest.testBoardClickOnNumberCell.executor": "Run",
     "JUnit.GameboardTest.testClickOnAlreadyRevealedCell.executor": "Run",
@@ -262,7 +262,7 @@
       <updated>1734643478423</updated>
       <workItem from="1734643479477" duration="10506000" />
       <workItem from="1735857042385" duration="790000" />
-      <workItem from="1736032463777" duration="450000" />
+      <workItem from="1736032463777" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
@@ -304,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734799712573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Test cases added">
+      <option name="closed" value="true" />
+      <created>1736033020599</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736033020599</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +334,7 @@
     <MESSAGE value="initialize classes and create test for gameboard" />
     <MESSAGE value="Gameboard test" />
     <MESSAGE value="Gameboard + name + bomb placement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gameboard + name + bomb placement" />
+    <MESSAGE value="Test cases added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test cases added" />
   </component>
 </project>
