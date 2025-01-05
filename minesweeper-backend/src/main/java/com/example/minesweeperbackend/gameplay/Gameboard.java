@@ -1,10 +1,13 @@
 package com.example.minesweeperbackend.gameplay;
 
+import lombok.Getter;
+
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.Random;
 
 
+@Getter
 public class Gameboard {
     private final int bombsCount;
     private final int rows;
@@ -61,7 +64,6 @@ public class Gameboard {
             } while (bombLocations[row][column]);
 
             bombLocations[row][column] = true;
-            System.out.println("Bomb placed at row: " + row + " column: " + column);
             gameBoard[row][column] = "B";
         }
 
@@ -72,29 +74,8 @@ public class Gameboard {
                 }
             }
         }
-
-        printGameboard();
     }
 
-
-
-    //TODO handle flag on frontend
-//    public void placeFlag(int x, int y){
-//        boolean[][] flag = new boolean[rows][columns];
-//        for (int i = 0; i < x; i++) {
-//            for (int j = 0; j < y; j++) {
-//                if (gameboard[i][j].equals("#")) {
-//                    gameboard[i][j] = "F";
-//                    flag[i][j] = true;
-//                    break;
-//                }
-//                if(gameboard[i][j].equals('F')){
-//
-//                }
-//            }
-//        }
-//        printGameboard();
-//    }
 
     public int checkAdjacentCells(int row, int column) {
         int count = 0;

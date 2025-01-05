@@ -1,6 +1,7 @@
 package com.example.minesweeperbackend.websockets;
 
 import com.example.minesweeperbackend.gameplay.Gameboard;
+import com.example.minesweeperbackend.gameplay.gamemodes.DailySweepGameMode;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,11 @@ public class WebSocketController {
     @Autowired
     private SimpMessagingTemplate messagingTemplate;
 
+    @Autowired
+    private DailySweepGameMode dailySweepGameMode;
+
     private final Map<String, Gameboard> campaignGameBoards = new ConcurrentHashMap<>();
     private final Map<String, Gameboard> practiceGameBoards = new ConcurrentHashMap<>();
-    private final Gameboard dailySweepGameboard = new Gameboard(15, 15, 40); // Shared across all players
-
 
     @MessageMapping("/minesweeper-websocket")
     public void handleWebSocketMessage(@Payload String message) throws Exception {
@@ -69,6 +71,7 @@ public class WebSocketController {
     }
 
     private void handleDailySweepMode(JsonNode jsonNode, String action) {
+        Gameboard dailySweepGameboard = dailySweepGameMode.getDailyGameboard();
         if ("revealCell".equals(action)) {
             int x = jsonNode.get("x").asInt();
             int y = jsonNode.get("y").asInt();

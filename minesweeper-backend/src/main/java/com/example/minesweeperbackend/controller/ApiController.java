@@ -1,7 +1,6 @@
-package com.example.minesweeperbackend.Controller;
+package com.example.minesweeperbackend.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -16,4 +15,8 @@ public class ApiController {
     public String startGame() {
         return "Game started";
     }
+
+
+
+
 }
