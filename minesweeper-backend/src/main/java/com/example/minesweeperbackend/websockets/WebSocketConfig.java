@@ -22,7 +22,9 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/minesweeper-websocket").setAllowedOrigins("*").withSockJS();
+        registry.addEndpoint("/minesweeper-websocket")
+                .setAllowedOriginPatterns("http://localhost:5173", "https://dailysweep.com")
+                .withSockJS();
     }
 
     private boolean isProductionEnvironment() {

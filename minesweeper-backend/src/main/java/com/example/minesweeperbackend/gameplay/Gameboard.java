@@ -6,17 +6,17 @@ import java.util.Random;
 
 
 public class Gameboard {
-    private int bombsCount;
-    private int rows;
-    private int columns;
-    String[][] gameboard;
+    private final int bombsCount;
+    private final int rows;
+    private final int columns;
+    String[][] gameBoard;
 
 
     public Gameboard(int rows, int columns, int bombs) {
         this.rows = rows;
         this.columns = columns;
         this.bombsCount = bombs;
-        gameboard = new String[rows][columns];
+        gameBoard = new String[rows][columns];
     }
 
     public int getRows(){
@@ -31,8 +31,8 @@ public class Gameboard {
         return bombsCount;
     }
 
-    public String[][] getGameboard(){
-        return gameboard;
+    public String[][] getGameBoard(){
+        return gameBoard;
     }
 
 
@@ -62,13 +62,13 @@ public class Gameboard {
 
             bombLocations[row][column] = true;
             System.out.println("Bomb placed at row: " + row + " column: " + column);
-            gameboard[row][column] = "B";
+            gameBoard[row][column] = "B";
         }
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (gameboard[i][j] == null) {
-                    gameboard[i][j] = "#";
+                if (gameBoard[i][j] == null) {
+                    gameBoard[i][j] = "#";
                 }
             }
         }
@@ -101,7 +101,7 @@ public class Gameboard {
         for (int i = row - 1; i <= row + 1; i++) {
             for (int j = column - 1; j <= column + 1; j++) {
                 if (i >= 0 && i < rows && j >= 0 && j < columns) {
-                    if (gameboard[i][j].equals("B")) {
+                    if (gameBoard[i][j].equals("B")) {
                         count++;
                     }
                 }
@@ -117,20 +117,20 @@ public class Gameboard {
         }
 
         // if bomb, game over
-        if (gameboard[row][column].equals("B")) {
+        if (gameBoard[row][column].equals("B")) {
             System.out.println("Game Over");
             return;
         }
 
-        if (gameboard[row][column].equals("#")) {
+        if (gameBoard[row][column].equals("#")) {
             // check if there are bombs around
             int nearBombCount = checkAdjacentCells(row, column);
             // if there are bombs around it then reveal number
             if (nearBombCount > 0) {
-                gameboard[row][column] = String.valueOf(nearBombCount);
+                gameBoard[row][column] = String.valueOf(nearBombCount);
             } else {
                 // mark as revealed
-                gameboard[row][column] = "E";
+                gameBoard[row][column] = "E";
                 // recursively reveal all adjacent cells
                 int[] dRow = {-1, -1, -1, 0, 0, 1, 1, 1};
                 int[] dCol = {-1, 0, 1, -1, 1, -1, 0, 1};
@@ -144,26 +144,19 @@ public class Gameboard {
 
     }
 
-        // if number, reveal number
-        // if empty, reveal empty
-
-
-
     public void printGameboard() {
         System.out.println("Gameboard:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (gameboard[i][j].equals("#")) {
+                if (gameBoard[i][j].equals("#")) {
                     System.out.print("# ");
                 } else {
-                    System.out.print(gameboard[i][j] + " ");
+                    System.out.print(gameBoard[i][j] + " ");
                 }
             }
             System.out.println();
         }
-        System.out.println(Arrays.deepToString(gameboard));
     }
-
 
 
 }

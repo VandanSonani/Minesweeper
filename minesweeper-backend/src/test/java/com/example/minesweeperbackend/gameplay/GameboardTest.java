@@ -1,6 +1,5 @@
 package com.example.minesweeperbackend.gameplay;
 
-import com.example.minesweeperbackend.gameplay.Gameboard;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
@@ -33,7 +32,7 @@ class GameboardTest {
         int bombCount = 0;
         for (int i = 0; i < gameboard.getRows(); i++) {
             for (int j = 0; j < gameboard.getColumns(); j++) {
-                if (gameboard.getGameboard()[i][j] == "B") {
+                if (gameboard.getGameBoard()[i][j] == "B") {
                     bombCount++;
                 }
             }
@@ -60,7 +59,7 @@ class GameboardTest {
         gameboard.placeBombs(Optional.of(12345));
         gameboard.revealCell(3, 3);
         gameboard.printGameboard();
-        assertEquals("1", gameboard.getGameboard()[3][3]);
+        assertEquals("1", gameboard.getGameBoard()[3][3]);
     }
 
     // Test for board click on a bomb - front end
@@ -74,7 +73,7 @@ class GameboardTest {
         gameboard.placeBombs(Optional.of(12345));
         gameboard.revealCell(4, 4);
         gameboard.printGameboard();
-        assertEquals("1", gameboard.getGameboard()[4][4]);
+        assertEquals("1", gameboard.getGameBoard()[4][4]);
     }
 
     // Test for board click on an empty cell
@@ -84,7 +83,7 @@ class GameboardTest {
         gameboard.placeBombs(Optional.of(12345));
         gameboard.revealCell(0, 0);
         gameboard.printGameboard();
-        assertEquals("E", gameboard.getGameboard()[0][0]);
+        assertEquals("E", gameboard.getGameBoard()[0][0]);
     }
 
 
@@ -97,7 +96,7 @@ class GameboardTest {
         gameboard.printGameboard();
         gameboard.revealCell(3, 3);
         gameboard.printGameboard();
-        assertEquals("1", gameboard.getGameboard()[3][3]);
+        assertEquals("1", gameboard.getGameBoard()[3][3]);
     }
 
     // Test to not allow flag on a already revealed cell
@@ -109,7 +108,7 @@ class GameboardTest {
         gameboard.placeBombs(Optional.of(12345));
         gameboard.revealCell(0, 4);
         gameboard.printGameboard();
-        assertEquals("B", gameboard.getGameboard()[0][4]);
+        assertEquals("B", gameboard.getGameBoard()[0][4]);
     }
 
 }
