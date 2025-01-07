@@ -1,7 +1,35 @@
 .board{
-
+    display: grid;
+    width: auto;
+    height: auto;
+    background-color : #8ba66e;
+    border-color: #ea1111;
+    border-width: 2px;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 9px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .cell{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #417003;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
 
+.cell:hover{
+    background: #4d8c57;
+    transition-duration: 500ms;
+    transform: scale(1.1);
+}
+
+.cell:active {
+    background: #2a4d2e;
 }

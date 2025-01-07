@@ -8,14 +8,16 @@ type BoardProps = {
 
 export const Board: FC<BoardProps> = ({gameboard}) => {
     return (
-        <div className="board">
+        <div className="board" >
             {gameboard.map((row, i) => (
                 row.map(( cell, j) => {
                     return (
-                        <div key={`${i}-${j}`} className="cell">
-                            <div onClick = { () => {
-                                console.log(`Clicked on cell ${i}-${j} and it was a ${cell}`);
-                            }}>CELL</div>
+                        <div className = "border">
+                            <div className = "cell" key={`${i}-${j}`}>
+                                <div onClick = { () => {
+                                    console.log(`Clicked on cell ${i}-${j} and it was a ${cell}`);
+                                }}></div>
+                            </div>
                         </div>
                     );
                 }

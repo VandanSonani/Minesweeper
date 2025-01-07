@@ -12,7 +12,7 @@ public class MinesweeperBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(MinesweeperBackendApplication.class, args);
 
-        Gameboard gameboard = new Gameboard(15, 15, 226);
+        Gameboard gameboard = new Gameboard(15, 15, 40);
         gameboard.placeBombs(Optional.empty());
         gameboard.revealCell(0,0);
         gameboard.printGameboard();
