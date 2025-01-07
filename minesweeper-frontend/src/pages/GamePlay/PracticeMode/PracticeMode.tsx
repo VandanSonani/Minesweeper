@@ -1,7 +1,7 @@
 import {FC, useEffect, useState} from "react";
-import { Client } from "@stomp/stompjs";
+import {Client} from "@stomp/stompjs";
 import SockJS from "sockjs-client";
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 import {Board} from "../../../components/Board/Board.tsx"; // Import UUID library
 
 const PracticeMode: FC = () => {
@@ -17,7 +17,9 @@ const PracticeMode: FC = () => {
             connectHeaders: {
                 'session-id': sessionId // Include the session ID in the headers
             },
-            debug: function (str) { console.log(str); }, // Debug messages for STOMP
+            debug: function (str) {
+                console.log(str);
+            }, // Debug messages for STOMP
             onConnect: () => {
                 console.log("STOMP connected");
 
@@ -56,7 +58,9 @@ const PracticeMode: FC = () => {
     return (
         <div>
             <h2>Practice Mode</h2>
-            <Board gameboard={gameboard ?? []}/>
+            <div className={'board-container'}>
+                <Board gameboard={gameboard ?? []}/>
+            </div>
         </div>
     );
 };

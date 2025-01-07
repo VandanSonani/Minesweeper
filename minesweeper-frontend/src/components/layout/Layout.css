@@ -1,4 +1,4 @@
-.layout{
+.layout {
     flex-direction: row;
     display: flex;
     width: 100%;
@@ -6,7 +6,7 @@
     overflow-y: hidden;
 }
 
-.nav-bar{
+.nav-bar {
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -16,11 +16,20 @@
 
 }
 
-.nav-item{
+.nav-item {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
     background-color: #d0d0d0;
     color: black;
     cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
 }

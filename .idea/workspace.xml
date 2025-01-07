@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="TEST">
+    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="practice board updates">
+      <change afterPath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/layout/Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/layout/Layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +22,12 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,12 +44,18 @@
     &quot;accountId&quot;: &quot;4e17dc2d-f862-4834-9940-ec975e287cb4&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
@@ -76,12 +88,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.MinesweeperBackendApplication.executor": "Run",
+    "code.cleanup.on.save": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/vandan/Desktop/personal project",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -89,7 +103,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
     "ts.external.directory.path": "/Users/vandan/Desktop/personal project/minesweeper-frontend/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -286,7 +301,7 @@
       <workItem from="1736032463777" duration="1201000" />
       <workItem from="1736117890749" duration="2767000" />
       <workItem from="1736214263370" duration="18000" />
-      <workItem from="1736217486974" duration="12713000" />
+      <workItem from="1736217486974" duration="16126000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
@@ -344,7 +359,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736217999401</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="practice board updates">
+      <option name="closed" value="true" />
+      <created>1736234552045</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736234552045</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +391,11 @@
     <MESSAGE value="Gameboard + name + bomb placement" />
     <MESSAGE value="Test cases added" />
     <MESSAGE value="TEST" />
-    <option name="LAST_COMMIT_MESSAGE" value="TEST" />
+    <MESSAGE value="practice board updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="practice board updates" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

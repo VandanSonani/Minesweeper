@@ -1,18 +1,18 @@
-.board{
+.board {
     display: grid;
     width: auto;
     height: auto;
-    background-color : #8ba66e;
+    background-color: #8ba66e;
     border-color: #ea1111;
     border-width: 2px;
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(15, 1fr);
-    gap: 9px;
-    border-radius: 5px;
+    gap: 5px;
+    border-radius: 2px;
     padding: 10px;
 }
 
-.cell{
+.cell {
     width: 30px;
     height: 30px;
     display: flex;
@@ -24,10 +24,8 @@
     cursor: pointer;
 }
 
-.cell:hover{
+.cell:hover {
     background: #4d8c57;
-    transition-duration: 500ms;
-    transform: scale(1.1);
 }
 
 .cell:active {
