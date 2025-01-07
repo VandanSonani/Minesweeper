@@ -1,9 +1,14 @@
-import { FC, useEffect } from "react";
+import {FC, useEffect, useState} from "react";
 import { Client } from "@stomp/stompjs";
 import SockJS from "sockjs-client";
-import { v4 as uuidv4 } from 'uuid'; // Import UUID library
+import { v4 as uuidv4 } from 'uuid';
+import {Board} from "../../../components/Board/Board.tsx"; // Import UUID library
 
 const PracticeMode: FC = () => {
+    const placeHolder = Array(10).fill(null).map(() => Array(10).fill("#"));
+    const [gameboard, setGameboard] = useState(placeHolder);
+
+
     useEffect(() => {
         const sessionId = uuidv4(); // Generate a unique session ID
         const socket = new SockJS("http://localhost:8080/minesweeper-websocket");
@@ -20,7 +25,8 @@ const PracticeMode: FC = () => {
                 console.log("Subscribing to practice topic for session ID:", sessionId);
                 stompClient.subscribe(`/topic/practice/${sessionId}`, (message) => {
                     const gameboard = JSON.parse(message.body);
-                    console.log("Received gameboard:", gameboard);
+                    console.log("Received gameboard:", gameboard?.gameBoard);
+                    setGameboard(gameboard?.gameBoard);
                 });
 
                 // Send the initial "initialize" message to start the gameboard for practice mode
@@ -42,16 +48,15 @@ const PracticeMode: FC = () => {
         });
 
         stompClient.activate(); // This starts the connection
-
-        // Cleanup function to deactivate the client on component unmount
         return () => {
             stompClient.deactivate();
         };
-    }, []); // Empty dependency array ensures this runs only once
+    }, []);
 
     return (
         <div>
             <h2>Practice Mode</h2>
+            <Board gameboard={gameboard ?? []}/>
         </div>
     );
 };
