@@ -19,6 +19,11 @@ public class Gameboard {
         this.rows = rows;
         this.columns = columns;
         this.bombsCount = bombs;
+
+        if (bombs > rows * columns) {
+            throw new IllegalArgumentException("Bomb count cannot be greater than the total number of cells.");
+        }
+
         gameBoard = new String[rows][columns];
     }
 
@@ -122,7 +127,22 @@ public class Gameboard {
 
             }
         }
+    }
+    public boolean isPuzzleSolved() {
+        // a puzzle is solved if, there are flags on all bombs OR all non bomb-cells are revealed
+        int flagCount = 0;
+        int revealedCount = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (gameBoard[i][j].equals("F")) {
+                    flagCount++;
+                } else if (gameBoard[i][j].equals("E") || gameBoard[i][j].matches("\\d+")) {
+                    revealedCount++;
+                }
+            }
+        }
 
+        return flagCount == bombsCount || revealedCount == (rows * columns - bombsCount);
     }
 
     public void printGameboard() {

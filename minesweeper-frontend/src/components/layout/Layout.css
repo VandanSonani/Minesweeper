@@ -1,0 +1,26 @@
+.layout{
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow-y: hidden;
+
+}
+
+.nav-item{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #d0d0d0;
+    color: black;
+    cursor: pointer;
+}
