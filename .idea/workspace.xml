@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="Test cases added">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_20_24__3_46PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/MinesweeperBackendApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,35 +59,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.GameboardTest.executor": "Run",
-    "JUnit.GameboardTest.testBoardClickOnEmptyCell.executor": "Run",
-    "JUnit.GameboardTest.testBoardClickOnNumberCell.executor": "Run",
-    "JUnit.GameboardTest.testClickOnAlreadyRevealedCell.executor": "Run",
-    "Maven.back-end [spring-boot:run].executor": "Run",
-    "Maven.back-end [test].executor": "Run",
-    "Maven.minesweeper-backend [exec:java].executor": "Run",
-    "Maven.minesweeper-backend [spring-boot:run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/vandan/Desktop/CS 342/Minesweeper/Minesweeper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.GameboardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameboardTest.testBoardClickOnEmptyCell.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameboardTest.testBoardClickOnNumberCell.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameboardTest.testClickOnAlreadyRevealedCell.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.back-end [spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.back-end [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.minesweeper-backend [exec:java].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.minesweeper-backend [spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MinesweeperBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vandan/Desktop/CS 342/Minesweeper/Minesweeper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -100,7 +108,7 @@
       <command value="mvn spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GameboardTest">
+  <component name="RunManager" selected="Spring Boot.MinesweeperBackendApplication">
     <configuration name="GameboardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
@@ -215,8 +223,12 @@
       <method v="2" />
     </configuration>
     <configuration name="MinesweeperBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="GOOGLE_CLOUD_PROJECT_ID" value="competitive-minesweeper-267bb" />
+        <env name="GOOGLE_APPLICATION_CREDENTIALS" value="$PROJECT_DIR$/minesweeper-backend/src/main/resources/private-key.json" />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="minesweeper-backend" />
+      <module name="back-end" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.minesweeperbackend.MinesweeperBackendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -235,6 +247,13 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.GameboardTest" />
+      <item itemvalue="JUnit.GameboardTest.testBoardClickOnEmptyCell" />
+      <item itemvalue="JUnit.GameboardTest.testBoardClickOnNumberCell" />
+      <item itemvalue="JUnit.GameboardTest.testClickOnAlreadyRevealedCell" />
+      <item itemvalue="Spring Boot.MinesweeperBackendApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameboardTest" />
@@ -263,6 +282,8 @@
       <workItem from="1734643479477" duration="10506000" />
       <workItem from="1735857042385" duration="790000" />
       <workItem from="1736032463777" duration="1201000" />
+      <workItem from="1736117890749" duration="2767000" />
+      <workItem from="1736214263370" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
