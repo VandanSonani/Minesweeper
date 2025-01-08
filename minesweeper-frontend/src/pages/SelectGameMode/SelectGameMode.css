@@ -1,0 +1,49 @@
+.home {
+    width: 200px;
+    height: 200px;
+    background: grey;
+    margin: 50px;
+
+    transform: skew(20deg);
+
+}
+
+
+.campaign {
+    width: 200px;
+    height: 200px;
+    background: grey;
+    margin: 50px;
+
+    transform: skew(20deg);
+
+}
+
+.dailysweep {
+    width: 200px;
+    height: 200px;
+    background: grey;
+    transform: skew(20deg);
+    text-align: center;
+    margin: 50px;
+
+}
+
+.practice {
+    width: 200px;
+    height: 200px;
+    background: grey;
+    transform: skew(20deg);
+    text-align: center;
+    margin: 50px;
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}

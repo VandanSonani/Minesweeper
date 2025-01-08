@@ -1,22 +1,17 @@
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from "react-router-dom";
+import {BrowserRouter, Route, Routes,} from "react-router-dom";
 
 import './App.css'
 import DailySweep from "./pages/GamePlay/DailySweep/DailySweep.tsx";
 import PracticeMode from "./pages/GamePlay/PracticeMode/PracticeMode.tsx";
 import CampaignMode from "./pages/GamePlay/CampaignMode/CampaignMode.tsx";
 import SelectGameMode from "./pages/SelectGameMode/SelectGameMode.tsx";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Login from "./components/oauth/Login.tsx";
 import {jwtDecode} from "jwt-decode";
-import {useState} from "react";
-import Layout from "./components/layout/Layout.tsx";
 
 
 declare const google: any;
+
 function App() {
 
     const [user, setUser] = useState({});
@@ -40,7 +35,7 @@ function App() {
         }
     }
 
-    useEffect( () => {
+    useEffect(() => {
         /* global google */
         google.accounts.id.initialize({
             client_id: "1043948039298-32l7ito98ck7hv8bfisjjr5cgv9iumpp.apps.googleusercontent.com",
@@ -57,19 +52,18 @@ function App() {
     // if we have user then show log out button
 
 
-  return (
-      <BrowserRouter>
-          <Layout>
-              <Routes>
-                  <Route path="/" element={<Login handleSignOut={handleSignOut} user={user}/>}/>
-                  <Route path="/dailysweep" element={<DailySweep />}/>
-                  <Route path="/campaign" element={<CampaignMode/>}/>
-                  <Route path="/practice" element={<PracticeMode/>}/>
-                  <Route path={"/selectgamemode"} element={<SelectGameMode/>}/>
-              </Routes>
-          </Layout>
-      </BrowserRouter>
-  )
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Login handleSignOut={handleSignOut} user={user}/>}/>
+                <Route path="/dailysweep" element={<DailySweep/>}/>
+                <Route path="/campaign" element={<CampaignMode/>}/>
+                <Route path="/practice" element={<PracticeMode/>}/>
+                <Route path={"/selectgamemode"} element={<SelectGameMode/>}/>
+                <Route path="/login" element={<Login handleSignOut={handleSignOut} user={user}/>}/>
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App

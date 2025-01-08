@@ -1,5 +1,6 @@
-import { FC } from "react";
-import { useNavigate } from "react-router-dom";
+import {FC} from "react";
+import {useNavigate} from "react-router-dom";
+import './SelectGameMode.css';
 
 const SelectGameMode: FC = () => {
     const navigate = useNavigate();
@@ -7,9 +8,13 @@ const SelectGameMode: FC = () => {
     return (
         <div>
             <h1>Select Game Mode</h1>
-            <button onClick={() => navigate("/campaign")}>Campaign Mode</button>
-            <button onClick={() => navigate("/practice")}>Practice Mode</button>
-            <button onClick={() => navigate("/dailysweep")}>DailySweep Mode</button>
+            <div className={"holder"}>
+                <button className={"home"} onClick={() => navigate("/")}>Home</button>
+                <button className={"campaign"} onClick={() => navigate("/campaign")}>Campaign</button>
+                <button className={"practice"} onClick={() => navigate("/practice")}>Practice</button>
+                <button className={"dailysweep"} onClick={() => navigate("/dailysweep")}>DailySweep</button>
+            </div>
+
         </div>
     );
 };

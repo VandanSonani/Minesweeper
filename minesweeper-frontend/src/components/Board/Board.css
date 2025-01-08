@@ -1,12 +1,9 @@
 .board {
     display: grid;
-    width: auto;
+    width: 35rem;
     height: auto;
     background-color: #8ba66e;
-    border-color: #ea1111;
-    border-width: 2px;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(15, 1fr);
     gap: 5px;
     border-radius: 2px;
     padding: 10px;

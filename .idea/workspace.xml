@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="practice board updates">
-      <change afterPath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/layout/Layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/layout/Layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -301,7 +300,7 @@
       <workItem from="1736032463777" duration="1201000" />
       <workItem from="1736117890749" duration="2767000" />
       <workItem from="1736214263370" duration="18000" />
-      <workItem from="1736217486974" duration="16126000" />
+      <workItem from="1736217486974" duration="18290000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
@@ -367,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736234552045</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="practice board updates">
+      <option name="closed" value="true" />
+      <created>1736284499812</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736284499812</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
