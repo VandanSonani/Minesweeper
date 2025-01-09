@@ -1,5 +1,5 @@
 import './Board.css';
-import {FC} from 'react';
+import {FC, useEffect, useState} from 'react';
 
 type BoardProps = {
     gameboard: string[][];
@@ -7,7 +7,7 @@ type BoardProps = {
 }
 
 const styleName = (cell: string) => {
-    switch(cell) {
+    switch (cell) {
         case '#':
             return 'hidden';
         case 'F':
@@ -36,17 +36,60 @@ const styleName = (cell: string) => {
 }
 
 
+type flagPlacement = {
+    row: number;
+    col: number;
+}
+
+
 export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
+
+
+    const [flaggedCells, setFlaggedCells] = useState<flagPlacement[]>([]);
+
+    const flagPlacement = (row: number, col: number) => {
+        const flagPlacementObject: flagPlacement = {row, col};
+        const isFlagged = flaggedCells.some(flag => flag.row === row && flag.col === col);
+        if (gameboard[row][col] !== '#' && gameboard[row][col] !== 'B') {
+            return;
+        }
+        if (isFlagged) {
+            const newFlaggedCells = flaggedCells.filter((flag) => {
+                return !(flag.row === row && flag.col === col);
+            });
+            setFlaggedCells(newFlaggedCells);
+        } else {
+            setFlaggedCells([...flaggedCells, flagPlacementObject]);
+        }
+    }
+
+    useEffect(() => {
+        console.log(flaggedCells);
+    }, [flaggedCells]);
+
+    const handleRightClick = (i: number, j: number) => {
+        flagPlacement(i, j);
+    }
+
+    const isFlag = (row: number, col: number) => {
+        const isFlagged = flaggedCells.some(flag => flag.row === row && flag.col === col);
+        return isFlagged ? 'flag' : '';
+    }
 
 
     return (<div className="board">
         {gameboard.map((row, i) => {
             return row.map((cell, j) => {
                 return (
-                    <div className="border" key={`${i}-${j}`} >
-                        <div className={styleName(cell) + " cell"} onClick={() => {
-                            onCellClick(i, j);
-                        }}/>
+                    <div className="border" key={`${i}-${j}`}>
+                        <div className={isFlag(i, j) + " " + styleName(cell) + " cell"} onClick={() => {
+                            onCellClick(i, j)
+                        }}
+                             onContextMenu={(e) => {
+                                 e.preventDefault();
+                                 handleRightClick(i, j)
+                             }}
+                        />
                     </div>
                 );
             })

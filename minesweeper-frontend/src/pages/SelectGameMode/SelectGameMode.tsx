@@ -1,10 +1,9 @@
-import {FC, useState} from "react";
+import {FC} from "react";
 import {useNavigate} from "react-router-dom";
 import './SelectGameMode.css';
 
 const SelectGameMode: FC = () => {
     const navigate = useNavigate();
-
 
 
     return (

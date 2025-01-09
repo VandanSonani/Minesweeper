@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="practice board updates">
+    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="practice board &amp; select screen updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,44 +68,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.GameboardTest.executor": "Run",
-    "JUnit.GameboardTest.testBoardClickOnEmptyCell.executor": "Run",
-    "JUnit.GameboardTest.testBoardClickOnNumberCell.executor": "Run",
-    "JUnit.GameboardTest.testClickOnAlreadyRevealedCell.executor": "Run",
-    "Maven.back-end [spring-boot:run].executor": "Run",
-    "Maven.back-end [test].executor": "Run",
-    "Maven.minesweeper-backend [exec:java].executor": "Run",
-    "Maven.minesweeper-backend [spring-boot:run].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.MinesweeperBackendApplication.executor": "Run",
-    "code.cleanup.on.save": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/vandan/Desktop/personal project",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "/Users/vandan/Desktop/personal project/minesweeper-frontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.GameboardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameboardTest.testBoardClickOnEmptyCell.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameboardTest.testBoardClickOnNumberCell.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameboardTest.testClickOnAlreadyRevealedCell.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.back-end [spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.back-end [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.minesweeper-backend [exec:java].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.minesweeper-backend [spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MinesweeperBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vandan/Desktop/personal project&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/vandan/Desktop/personal project/minesweeper-frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -300,7 +298,7 @@
       <workItem from="1736032463777" duration="1201000" />
       <workItem from="1736117890749" duration="2767000" />
       <workItem from="1736214263370" duration="18000" />
-      <workItem from="1736217486974" duration="18290000" />
+      <workItem from="1736217486974" duration="28485000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
@@ -374,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736284499812</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="practice board &amp; select screen updates">
+      <option name="closed" value="true" />
+      <created>1736368010922</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736368010922</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +405,8 @@
     <MESSAGE value="Test cases added" />
     <MESSAGE value="TEST" />
     <MESSAGE value="practice board updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="practice board updates" />
+    <MESSAGE value="practice board &amp; select screen updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="practice board &amp; select screen updates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

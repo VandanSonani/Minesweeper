@@ -20,14 +20,27 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+
 .one {
     background: #b84f4f;
 }
 
 .cell:hover {
-    background: #4d8c57;
+    background: rgba(255, 255, 255, 0);
 }
 
 .cell:active {
     background: #2a4d2e;
+}
+
+.flag {
+    background: #f7f7f7;
+}
+
+.flag.cell:hover {
+    background: rgba(255, 255, 255, 0.46);
+}
+
+.one.cell:hover {
+    background: rgba(184, 79, 79, 0.4);
 }
