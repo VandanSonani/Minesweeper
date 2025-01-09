@@ -20,6 +20,9 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
+.one {
+    background: #b84f4f;
+}
 
 .cell:hover {
     background: #4d8c57;

@@ -88,11 +88,11 @@ public class WebSocketController {
             gameboard.placeBombs(Optional.empty());
             practiceGameBoards.put(sessionId, gameboard);
             messagingTemplate.convertAndSend("/topic/practice/" + sessionId, gameboard);
-        } else if ("revealCell".equals(action)) {
+        } else if ("reveal".equals(action)) {
             Gameboard gameboard = practiceGameBoards.get(sessionId);
             if (gameboard != null) {
-                int x = jsonNode.get("x").asInt();
-                int y = jsonNode.get("y").asInt();
+                int x = jsonNode.get("row").asInt();
+                int y = jsonNode.get("column").asInt();
                 gameboard.revealCell(x, y);
                 gameboard.printGameboard();
                 messagingTemplate.convertAndSend("/topic/practice/" + sessionId, gameboard);
