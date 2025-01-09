@@ -21,9 +21,6 @@
     cursor: pointer;
 }
 
-.one {
-    background: #b84f4f;
-}
 
 .cell:hover {
     background: rgba(255, 255, 255, 0);
@@ -34,13 +31,61 @@
 }
 
 .flag {
-    background: #f7f7f7;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Minesweeper_flag.svg/1024px-Minesweeper_flag.svg.png');
+    background-size: cover;
 }
 
 .flag.cell:hover {
     background: rgba(255, 255, 255, 0.46);
 }
 
+
+.one {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Minesweeper_1.svg/1200px-Minesweeper_1.svg.png');
+    background-size: cover;
+
+}
+
 .one.cell:hover {
     background: rgba(184, 79, 79, 0.4);
 }
+
+.two {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Minesweeper_2.svg/1200px-Minesweeper_2.svg.png ");
+    background-size: cover;
+}
+
+.two.cell:hover {
+    background: rgba(79, 79, 184, 0.4);
+}
+
+.three {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Minesweeper_3.svg/480px-Minesweeper_3.svg.png");
+    background-size: cover;
+}
+
+.four {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Minesweeper_4.svg/1200px-Minesweeper_4.svg.png");
+    background-size: cover;
+}
+
+.five {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Minesweeper_5.svg/2048px-Minesweeper_5.svg.png");
+    background-size: cover;
+}
+
+.six {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Minesweeper_6.svg/640px-Minesweeper_6.svg.png");
+    background-size: cover;
+}
+
+.seven {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Minesweeper_7.svg/2048px-Minesweeper_7.svg.png");
+    background-size: cover;
+}
+
+.eight {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Minesweeper_8.svg/1200px-Minesweeper_8.svg.png");
+    background-size: cover;
+}
+

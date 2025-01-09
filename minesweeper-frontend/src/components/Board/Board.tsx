@@ -10,6 +10,8 @@ const styleName = (cell: string) => {
     switch (cell) {
         case '#':
             return 'hidden';
+        case 'E':
+            return 'empty';
         case 'F':
             return 'flag';
         case 'B':
@@ -83,7 +85,10 @@ export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
                 return (
                     <div className="border" key={`${i}-${j}`}>
                         <div className={isFlag(i, j) + " " + styleName(cell) + " cell"} onClick={() => {
-                            onCellClick(i, j)
+                            if (!isFlag(i, j)) {
+                                onCellClick(i, j);
+                            }
+
                         }}
                              onContextMenu={(e) => {
                                  e.preventDefault();

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="practice board &amp; select screen updates">
+    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="flag placement updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" afterDir="false" />
@@ -298,7 +298,7 @@
       <workItem from="1736032463777" duration="1201000" />
       <workItem from="1736117890749" duration="2767000" />
       <workItem from="1736214263370" duration="18000" />
-      <workItem from="1736217486974" duration="28485000" />
+      <workItem from="1736217486974" duration="31993000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
@@ -380,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736368010922</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="flag placement updates">
+      <option name="closed" value="true" />
+      <created>1736395370651</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1736395370651</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +414,8 @@
     <MESSAGE value="TEST" />
     <MESSAGE value="practice board updates" />
     <MESSAGE value="practice board &amp; select screen updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="practice board &amp; select screen updates" />
+    <MESSAGE value="flag placement updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="flag placement updates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
