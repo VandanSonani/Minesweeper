@@ -1,15 +1,17 @@
-import {FC, useEffect, useState, useRef} from "react";
+import {FC, useEffect, useRef, useState} from "react";
 import {Client} from "@stomp/stompjs";
 import SockJS from "sockjs-client";
 import {v4 as uuidv4} from 'uuid';
 import {Board} from "../../../components/Board/Board.tsx"; // Import UUID library
 import './PracticeMode.css'
+import {useNavigate} from "react-router-dom";
 
 const PracticeMode: FC = () => {
     const placeHolder = Array(10).fill(null).map(() => Array(10).fill("#"));
     const [gameboard, setGameboard] = useState<string[][]>(placeHolder);
     const stompClientRef = useRef<Client | null>(null);
     const sessionIdRef = useRef<string>("");
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -76,6 +78,7 @@ const PracticeMode: FC = () => {
 
     return (
         <div>
+            <div className="exit" onClick={() => navigate("/selectgamemode")}></div>
             <div className={'board-container'}>
                 <h1>Practice Mode</h1>
                 <Board gameboard={gameboard ?? []} onCellClick={handleCellClick}/>

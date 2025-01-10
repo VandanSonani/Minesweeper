@@ -22,23 +22,15 @@
 }
 
 
-.cell:hover {
-    background: rgba(255, 255, 255, 0);
+.cell.empty {
+    background: lightgray;
 }
 
-.cell:active {
-    background: #2a4d2e;
-}
 
 .flag {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Minesweeper_flag.svg/1024px-Minesweeper_flag.svg.png');
     background-size: cover;
 }
-
-.flag.cell:hover {
-    background: rgba(255, 255, 255, 0.46);
-}
-
 
 .one {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Minesweeper_1.svg/1200px-Minesweeper_1.svg.png');
@@ -46,17 +38,10 @@
 
 }
 
-.one.cell:hover {
-    background: rgba(184, 79, 79, 0.4);
-}
 
 .two {
     background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Minesweeper_2.svg/1200px-Minesweeper_2.svg.png ");
     background-size: cover;
-}
-
-.two.cell:hover {
-    background: rgba(79, 79, 184, 0.4);
 }
 
 .three {

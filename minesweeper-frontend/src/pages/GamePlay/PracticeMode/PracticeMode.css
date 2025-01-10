@@ -5,3 +5,11 @@
     flex-direction: column;
     margin-top: 2rem;
 }
+
+.exit {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    background-image: url("https://freesvg.org/img/1386985357.png");
+    background-size: cover;
+}

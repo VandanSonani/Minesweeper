@@ -78,6 +78,9 @@ export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
         return isFlagged ? 'flag' : '';
     }
 
+    const isBomb = (row: number, col: number) => {
+    }
+
 
     return (<div className="board">
         {gameboard.map((row, i) => {
@@ -87,7 +90,12 @@ export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
                         <div className={isFlag(i, j) + " " + styleName(cell) + " cell"} onClick={() => {
                             if (!isFlag(i, j)) {
                                 onCellClick(i, j);
+                                if (isBomb(i, j)) {
+                                    console.log("You clicked on a bomb");
+
+                                }
                             }
+
 
                         }}
                              onContextMenu={(e) => {
