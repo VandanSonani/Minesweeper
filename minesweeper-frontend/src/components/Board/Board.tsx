@@ -46,8 +46,9 @@ type flagPlacement = {
 
 export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
 
-
     const [flaggedCells, setFlaggedCells] = useState<flagPlacement[]>([]);
+    const [isBombCheck, setIsBombCheck] = useState(false);
+
 
     const flagPlacement = (row: number, col: number) => {
         const flagPlacementObject: flagPlacement = {row, col};
@@ -78,41 +79,44 @@ export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
         return isFlagged ? 'flag' : '';
     }
 
+    const handleCellClick = (i: number, j: number) => {
+        if (styleName(gameboard[i][j]) === 'hidden' || styleName(gameboard[i][j]) === 'hidden-bomb' && !isFlag(i, j)) {
+            onCellClick(i, j);
+            if (isBomb(i, j)) {
+                console.log("You clicked on a bomb");
+                setIsBombCheck(true);
+            }
+        }
+    };
 
 
     //todo finish this function
     const isBomb = (row: number, col: number) => {
-        return false;
+        const checkBomb = gameboard[row][col] === 'B';
+        return checkBomb ? 'bomb' : '';
     }
 
 
-    return (<div className="board">
-        {gameboard.map((row, i) => {
-            return row.map((cell, j) => {
-                return (
-                    <div className="border" key={`${i}-${j}`}>
-                        <div className={isFlag(i, j) + " " + styleName(cell) + " cell"} onClick={() => {
-                            if (!isFlag(i, j)) {
-                                onCellClick(i, j);
-                                if (isBomb(i, j)) {
-                                    console.log("You clicked on a bomb");
-
-                                }
-                            }
-
-
-                        }}
-                             onContextMenu={(e) => {
-                                 e.preventDefault();
-                                 handleRightClick(i, j)
-                             }}
-                        />
-                    </div>
-                );
-            })
-        })
-        }
-    </div>);
+    return (
+        <div className="board">
+            {gameboard.map((row, i) => {
+                return row.map((cell, j) => {
+                    return (
+                        <div className="border" key={`${i}-${j}`}>
+                            <div
+                                className={`${isBombCheck && isBomb(i, j) ? 'bomb' : ''} ${isFlag(i, j)} ${styleName(cell)} cell`}
+                                onClick={() => handleCellClick(i, j)}
+                                onContextMenu={(e) => {
+                                    e.preventDefault();
+                                    handleRightClick(i, j);
+                                }}
+                            />
+                        </div>
+                    );
+                });
+            })}
+        </div>
+    );
 };
 
 

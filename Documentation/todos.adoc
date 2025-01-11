@@ -7,9 +7,9 @@
 
 == Frontend
 *  [x] Add todos to the documentation
-* [ ] Stop sending the backend already revealed cell clicks (anything that already has a number or E).
-* [ ] Add a visual for hitting a bomb (red cell maybe)
-* [ ] if a bomb is hit, show all bombs
+* [x] Stop sending the backend already revealed cell clicks (anything that already has a number or E).
+* [x] Add a visual for hitting a bomb (red cell maybe)
+* [x] if a bomb is hit, show all bombs
 * [ ] Add a visual for winning
 * [ ] Add a visual for losing
 

@@ -15,7 +15,6 @@ const PracticeMode: FC = () => {
     const navigate = useNavigate();
 
 
-
     useEffect(() => {
         const sessionId = uuidv4();
         sessionIdRef.current = sessionId;
@@ -71,6 +70,18 @@ const PracticeMode: FC = () => {
                 destination: "/app/minesweeper-websocket",
                 body: JSON.stringify({
                     action: "reveal",
+                    row: i,
+                    column: j,
+                    mode: "practice",
+                    sessionId: sessionIdRef.current
+                }),
+            });
+        }
+        if (gameboard[i][j] === 'B') {
+            stompClientRef.current?.publish({
+                destination: "/app/minesweeper-websocket",
+                body: JSON.stringify({
+                    action: "gameOver",
                     row: i,
                     column: j,
                     mode: "practice",

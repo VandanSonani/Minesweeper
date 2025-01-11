@@ -21,16 +21,14 @@ import java.util.concurrent.TimeUnit;
 @Controller
 public class WebSocketController {
 
-    @Autowired
-    private SimpMessagingTemplate messagingTemplate;
-
-    @Autowired
-    private DailySweepGameMode dailySweepGameMode;
-
     private final Map<String, Gameboard> campaignGameBoards = new ConcurrentHashMap<>();
     private final Map<String, Gameboard> practiceGameBoards = new ConcurrentHashMap<>();
     private final Queue<String> rankedQueue = new LinkedList<>();
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+    @Autowired
+    private SimpMessagingTemplate messagingTemplate;
+    @Autowired
+    private DailySweepGameMode dailySweepGameMode;
 
     @MessageMapping("/minesweeper-websocket")
     public void handleWebSocketMessage(@Payload String message) throws Exception {
@@ -98,7 +96,7 @@ public class WebSocketController {
                         messagingTemplate.convertAndSend("/topic/ranked/" + player1, gameboard);
                         messagingTemplate.convertAndSend("/topic/ranked/" + player2, gameboard);
                     }, 3, TimeUnit.SECONDS);
-                }else{
+                } else {
                     log.error("Player 1 and Player 2 are the same. Ignoring the match.");
                 }
             }
@@ -140,6 +138,15 @@ public class WebSocketController {
                 gameboard.revealCell(x, y);
                 gameboard.printGameboard();
                 messagingTemplate.convertAndSend("/topic/practice/" + sessionId, gameboard);
+            }
+        }
+
+        if ("gameOver".equals(action)) {
+            Gameboard gameboard = practiceGameBoards.get(sessionId);
+            if (gameboard != null) {
+                // send num of clicks
+                // send num of flags placed
+                messagingTemplate.convertAndSend("/topic/practice/" + sessionId, "Game Over");
             }
         }
     }
