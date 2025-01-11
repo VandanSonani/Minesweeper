@@ -4,16 +4,20 @@ import com.example.minesweeperbackend.gameplay.Gameboard;
 import com.example.minesweeperbackend.gameplay.gamemodes.DailySweepGameMode;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
+@Slf4j
 @Controller
 public class WebSocketController {
 
@@ -25,6 +29,8 @@ public class WebSocketController {
 
     private final Map<String, Gameboard> campaignGameBoards = new ConcurrentHashMap<>();
     private final Map<String, Gameboard> practiceGameBoards = new ConcurrentHashMap<>();
+    private final Queue<String> rankedQueue = new LinkedList<>();
+    private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
     @MessageMapping("/minesweeper-websocket")
     public void handleWebSocketMessage(@Payload String message) throws Exception {
@@ -54,6 +60,9 @@ public class WebSocketController {
             case "practice":
                 handlePracticeMode(sessionId, jsonNode, action);
                 break;
+            case "ranked":
+                handleRankedMode(sessionId, jsonNode, action);
+                break;
             default:
                 System.out.println("Unknown game mode: " + mode);
         }
@@ -67,6 +76,37 @@ public class WebSocketController {
             gameboard.revealCell(x, y);
             gameboard.printGameboard();
             messagingTemplate.convertAndSend("/topic/campaign/" + sessionId, gameboard);
+        }
+    }
+
+    private void handleRankedMode(String sessionId, JsonNode jsonNode, String action) {
+        if ("joinRankedQueue".equals(action)) {
+            rankedQueue.add(sessionId);
+            System.out.println("Client " + sessionId + " joined the ranked queue");
+            messagingTemplate.convertAndSend("/topic/ranked/" + sessionId, "[LOG] client joined the ranked queue");
+            if (rankedQueue.size() >= 2) {
+                String player1 = rankedQueue.poll();
+                String player2 = rankedQueue.poll();
+                if (!Objects.equals(player1, player2)) {
+                    messagingTemplate.convertAndSend("/topic/ranked/" + player1, "Match will be confirmed in 3 seconds");
+                    messagingTemplate.convertAndSend("/topic/ranked/" + player2, "Match will be confirmed in 3 seconds");
+                    System.out.println("Match found between " + player1 + " and " + player2);
+                    scheduler.schedule(() -> {
+                        Gameboard gameboard = new Gameboard(15, 15, 40);
+                        Integer randomSeed = new Random().nextInt();
+                        gameboard.placeBombs(0, 0, Optional.of(randomSeed));
+                        messagingTemplate.convertAndSend("/topic/ranked/" + player1, gameboard);
+                        messagingTemplate.convertAndSend("/topic/ranked/" + player2, gameboard);
+                    }, 3, TimeUnit.SECONDS);
+                }else{
+                    log.error("Player 1 and Player 2 are the same. Ignoring the match.");
+                }
+            }
+        }
+        if ("leaveRankedQueue".equals(action)) {
+            rankedQueue.remove(sessionId);
+            messagingTemplate.convertAndSend("/topic/ranked/" + sessionId, "[LOG] client left the ranked queue");
+            System.out.println("Client " + sessionId + " left the ranked queue");
         }
     }
 

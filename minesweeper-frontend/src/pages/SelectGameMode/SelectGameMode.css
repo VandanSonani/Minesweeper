@@ -9,8 +9,14 @@
 }
 
 .holder > * {
-    width: 10rem;
-    height: 5rem;
-    background: grey;
+    width: 9rem;
+    height: 3rem;;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
 
+.holder > *:hover {
+    background-color: #454545;
+    color: white;
+    cursor: pointer;
 }

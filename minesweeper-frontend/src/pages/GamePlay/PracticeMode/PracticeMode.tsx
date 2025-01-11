@@ -14,6 +14,8 @@ const PracticeMode: FC = () => {
     const sessionIdRef = useRef<string>("");
     const navigate = useNavigate();
 
+
+
     useEffect(() => {
         const sessionId = uuidv4();
         sessionIdRef.current = sessionId;
@@ -79,7 +81,7 @@ const PracticeMode: FC = () => {
     }
 
     return (
-        <div>
+        <div className={'practice-page'}>
             <div className="exit" onClick={() => navigate("/selectgamemode")}></div>
             <div className={'board-container'}>
                 <h1>Practice Mode</h1>

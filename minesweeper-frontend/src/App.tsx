@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Routes,} from "react-router-dom";
 import './App.css'
 import DailySweep from "./pages/GamePlay/DailySweep/DailySweep.tsx";
 import PracticeMode from "./pages/GamePlay/PracticeMode/PracticeMode.tsx";
-import CampaignMode from "./pages/GamePlay/CampaignMode/CampaignMode.tsx";
+import RankedMode from "./pages/GamePlay/RankedMode/RankedMode.tsx";
 import SelectGameMode from "./pages/SelectGameMode/SelectGameMode.tsx";
 import {useEffect, useState} from "react";
 import Login from "./components/oauth/Login.tsx";
@@ -57,7 +57,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<SelectGameMode/>}/>
                 <Route path="/dailysweep" element={<DailySweep/>}/>
-                <Route path="/campaign" element={<CampaignMode/>}/>
+                <Route path="/ranked" element={<RankedMode/>}/>
                 <Route path="/practice" element={<PracticeMode/>}/>
                 <Route path={"/selectgamemode"} element={<SelectGameMode/>}/>
                 <Route path="/login" element={<Login handleSignOut={handleSignOut} user={user}/>}/>

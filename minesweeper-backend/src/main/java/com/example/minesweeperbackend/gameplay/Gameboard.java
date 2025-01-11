@@ -1,8 +1,6 @@
 package com.example.minesweeperbackend.gameplay;
 
 import lombok.Getter;
-
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.Random;
 

@@ -13,9 +13,10 @@ const SelectGameMode: FC = () => {
                 <div style={{height: '25rem'}}/>
                 <section className={"holder"}>
                     <button className={"home"} onClick={() => navigate("/")}>Home</button>
-                    <button className={"campaign"} onClick={() => navigate("/campaign")}>Campaign</button>
+                    {/*<button className={"campaign"} onClick={() => navigate("/campaign")}>Campaign</button>*/}
                     <button className={"practice"} onClick={() => navigate("/practice")}>Practice</button>
-                    <button className={"dailysweep"} onClick={() => navigate("/dailysweep")}>DailySweep</button>
+                    <button className={"ranked"} onClick={() => navigate("/ranked")}>Ranked</button>
+                    {/*<button className={"dailysweep"} onClick={() => navigate("/dailysweep")}>DailySweep</button>*/}
                 </section>
             </div>
 
