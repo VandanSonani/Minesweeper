@@ -29,6 +29,8 @@ public class WebSocketController {
     private SimpMessagingTemplate messagingTemplate;
     @Autowired
     private DailySweepGameMode dailySweepGameMode;
+    private final Map<String, Gameboard> rankedGameBoards = new ConcurrentHashMap<>();
+    private final Map<String, String> playerPairs = new ConcurrentHashMap<>();
 
     @MessageMapping("/minesweeper-websocket")
     public void handleWebSocketMessage(@Payload String message) throws Exception {
@@ -77,6 +79,9 @@ public class WebSocketController {
         }
     }
 
+    //todo if a high volume of players join the ranked queue, the scheduler will not be able to handle the load
+    // should be replaced with a more robust solution
+
     private void handleRankedMode(String sessionId, JsonNode jsonNode, String action) {
         if ("joinRankedQueue".equals(action)) {
             rankedQueue.add(sessionId);
@@ -85,16 +90,25 @@ public class WebSocketController {
             if (rankedQueue.size() >= 2) {
                 String player1 = rankedQueue.poll();
                 String player2 = rankedQueue.poll();
+                playerPairs.put(player1, player2);
+                playerPairs.put(player2, player1);
                 if (!Objects.equals(player1, player2)) {
                     messagingTemplate.convertAndSend("/topic/ranked/" + player1, "Match will be confirmed in 3 seconds");
                     messagingTemplate.convertAndSend("/topic/ranked/" + player2, "Match will be confirmed in 3 seconds");
                     System.out.println("Match found between " + player1 + " and " + player2);
                     scheduler.schedule(() -> {
                         Gameboard gameboard = new Gameboard(15, 15, 40);
+                        Gameboard gameboard2 = new Gameboard(15, 15, 40);
                         Integer randomSeed = new Random().nextInt();
+
                         gameboard.placeBombs(0, 0, Optional.of(randomSeed));
+                        gameboard2.placeBombs(0, 0, Optional.of(randomSeed));
+                        gameboard.revealCell(0, 0);
+                        gameboard2.revealCell(0, 0);
+                        rankedGameBoards.put(player1, gameboard);
+                        rankedGameBoards.put(player2, gameboard2);
                         messagingTemplate.convertAndSend("/topic/ranked/" + player1, gameboard);
-                        messagingTemplate.convertAndSend("/topic/ranked/" + player2, gameboard);
+                        messagingTemplate.convertAndSend("/topic/ranked/" + player2, gameboard2);
                     }, 3, TimeUnit.SECONDS);
                 } else {
                     log.error("Player 1 and Player 2 are the same. Ignoring the match.");
@@ -103,8 +117,21 @@ public class WebSocketController {
         }
         if ("leaveRankedQueue".equals(action)) {
             rankedQueue.remove(sessionId);
+            rankedGameBoards.remove(sessionId);
             messagingTemplate.convertAndSend("/topic/ranked/" + sessionId, "[LOG] client left the ranked queue");
             System.out.println("Client " + sessionId + " left the ranked queue");
+        }
+        if ("reveal".equals(action)) {
+            Gameboard gameboard = rankedGameBoards.get(sessionId);
+            if (gameboard != null) {
+                int x = jsonNode.get("row").asInt();
+                int y = jsonNode.get("column").asInt();
+                gameboard.revealCell(x, y);
+                gameboard.printGameboard();
+                messagingTemplate.convertAndSend("/topic/ranked/" + sessionId, gameboard);
+            } else {
+                System.out.println("No gameboard found for session: " + sessionId);
+            }
         }
     }
 

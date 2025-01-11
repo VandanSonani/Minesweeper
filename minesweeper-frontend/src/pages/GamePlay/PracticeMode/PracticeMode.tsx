@@ -5,7 +5,6 @@ import {v4 as uuidv4} from 'uuid';
 import {Board} from "../../../components/Board/Board.tsx";
 import './PracticeMode.css'
 import {useNavigate} from "react-router-dom";
-
 const PracticeMode: FC = () => {
     const placeHolder = Array(15).fill(null).map(() => Array(15).fill("#"));
     const [gameboard, setGameboard] = useState<string[][]>(placeHolder);
