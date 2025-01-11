@@ -85,7 +85,11 @@ public class WebSocketController {
         if ("initialize".equals(action)) {
             System.out.println("Initializing gameboard for practice mode: " + sessionId);
             Gameboard gameboard = new Gameboard(15, 15, 40);
-            gameboard.placeBombs(Optional.empty());
+            int x = jsonNode.get("row").asInt();
+            int y = jsonNode.get("column").asInt();
+            gameboard.placeBombs(x, y, Optional.empty());
+            gameboard.revealCell(x, y);
+
             practiceGameBoards.put(sessionId, gameboard);
             messagingTemplate.convertAndSend("/topic/practice/" + sessionId, gameboard);
         } else if ("reveal".equals(action)) {

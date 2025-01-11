@@ -37,7 +37,7 @@ public class DailySweepGameMode {
             LocalDate currentDate = LocalDate.now(ZoneOffset.UTC);
             int seed = currentDate.hashCode();
             dailyGameboard = new Gameboard(15, 15, 40);
-            dailyGameboard.placeBombs(Optional.of(seed));
+//            dailyGameboard.placeBombs(Optional.of(seed));
             lastGeneratedDate = currentDate;
             updateTimeLeftUntilNextBoard();
             System.out.println("New daily gameboard generated with seed: " + seed);

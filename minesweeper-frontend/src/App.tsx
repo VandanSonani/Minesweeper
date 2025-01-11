@@ -55,7 +55,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login handleSignOut={handleSignOut} user={user}/>}/>
+                <Route path="/" element={<SelectGameMode/>}/>
                 <Route path="/dailysweep" element={<DailySweep/>}/>
                 <Route path="/campaign" element={<CampaignMode/>}/>
                 <Route path="/practice" element={<PracticeMode/>}/>

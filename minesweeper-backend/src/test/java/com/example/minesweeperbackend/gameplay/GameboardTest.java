@@ -19,7 +19,7 @@ class GameboardTest {
     @Test
     public void testPrintGameboard() {
         Gameboard gameboard = new Gameboard(2, 2, 1);
-        gameboard.placeBombs(Optional.empty());
+        gameboard.placeBombs(0,0,Optional.empty());
     }
 
     // TODO, finish tests
@@ -28,7 +28,7 @@ class GameboardTest {
     @Test
     public void testBombPlacement() {
         Gameboard gameboard = new Gameboard(6, 6, 3);
-        gameboard.placeBombs(Optional.empty());
+        gameboard.placeBombs(0, 0, Optional.empty());
         int bombCount = 0;
         for (int i = 0; i < gameboard.getRows(); i++) {
             for (int j = 0; j < gameboard.getColumns(); j++) {
@@ -56,7 +56,7 @@ class GameboardTest {
     @Test
     public void testBoardClick() {
         Gameboard gameboard = new Gameboard(15, 15, 40);
-        gameboard.placeBombs(Optional.of(12345));
+        gameboard.placeBombs(0, 0, Optional.of(12345));
         gameboard.revealCell(3, 3);
         gameboard.printGameboard();
         assertEquals("1", gameboard.getGameBoard()[3][3]);
@@ -70,7 +70,7 @@ class GameboardTest {
     @Test
     public void testBoardClickOnNumberCell() {
         Gameboard gameboard = new Gameboard(15, 15, 40);
-        gameboard.placeBombs(Optional.of(12345));
+        gameboard.placeBombs(0, 0, Optional.of(12345));
         gameboard.revealCell(4, 4);
         gameboard.printGameboard();
         assertEquals("1", gameboard.getGameBoard()[4][4]);
@@ -80,7 +80,7 @@ class GameboardTest {
     @Test
     public void testBoardClickOnEmptyCell() {
         Gameboard gameboard = new Gameboard(15, 15, 40);
-        gameboard.placeBombs(Optional.of(12345));
+        gameboard.placeBombs(0, 0, Optional.of(12345));
         gameboard.revealCell(0, 0);
         gameboard.printGameboard();
         assertEquals("E", gameboard.getGameBoard()[0][0]);
@@ -91,7 +91,7 @@ class GameboardTest {
     @Test
     public void testClickOnAlreadyRevealedCell() {
         Gameboard gameboard = new Gameboard(15, 15, 40);
-        gameboard.placeBombs(Optional.of(12345));
+        gameboard.placeBombs(0, 0, Optional.of(12345));
         gameboard.revealCell(3, 3);
         gameboard.printGameboard();
         gameboard.revealCell(3, 3);
@@ -105,7 +105,7 @@ class GameboardTest {
     @Test
     public void testClickingBombs() {
         Gameboard gameboard = new Gameboard(15, 15, 40);
-        gameboard.placeBombs(Optional.of(12345));
+        gameboard.placeBombs(0, 0, Optional.of(12345));
         gameboard.revealCell(0, 4);
         gameboard.printGameboard();
         assertEquals("B", gameboard.getGameBoard()[0][4]);

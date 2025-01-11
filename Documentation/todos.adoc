@@ -1,0 +1,18 @@
+
+
+= Todos
+
+- 1.0.0
+- [1/10/25]
+
+== Frontend
+*  [x] Add todos to the documentation
+* [ ] Stop sending the backend already revealed cell clicks (anything that already has a number or E).
+* [ ] Add a visual for hitting a bomb (red cell maybe)
+* [ ] if a bomb is hit, show all bombs
+* [ ] Add a visual for winning
+* [ ] Add a visual for losing
+
+== Backend
+* [ ] Add a way to allow more than one player to join the game.
+* [ ] keep track of time since the game has started.

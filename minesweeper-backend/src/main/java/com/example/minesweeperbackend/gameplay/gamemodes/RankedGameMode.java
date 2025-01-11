@@ -24,7 +24,7 @@ public class RankedGameMode {
     private Gameboard gameboard = new Gameboard(12, 15, 40);
 
     public void initializeRankedGameMode() {
-        gameboard.placeBombs(Optional.empty());
+//        gameboard.placeBombs(Optional.empty());
     }
 
 

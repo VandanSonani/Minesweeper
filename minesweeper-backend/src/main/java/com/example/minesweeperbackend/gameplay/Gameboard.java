@@ -51,7 +51,11 @@ public class Gameboard {
     // Math.random to generate random numbers
     //print board in bomb
 
-    public void placeBombs(Optional<Integer> seed) {
+    private boolean isWithinSafeZone(int row, int column, int x, int y) {
+        return row >= x - 1 && row <= x + 1 && column >= y - 1 && column <= y + 1;
+    }
+
+    public void placeBombs(Integer x, Integer y, Optional<Integer> seed) {
         boolean[][] bombLocations = new boolean[rows][columns];
         Random random;
 
@@ -66,7 +70,7 @@ public class Gameboard {
             do {
                 row = random.nextInt(rows);
                 column = random.nextInt(columns);
-            } while (bombLocations[row][column]);
+            } while (bombLocations[row][column] || isWithinSafeZone(row, column, x, y));
 
             bombLocations[row][column] = true;
             gameBoard[row][column] = "B";
@@ -80,7 +84,6 @@ public class Gameboard {
             }
         }
     }
-
 
     public int checkAdjacentCells(int row, int column) {
         int count = 0;

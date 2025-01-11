@@ -13,7 +13,7 @@ public class MinesweeperBackendApplication {
         SpringApplication.run(MinesweeperBackendApplication.class, args);
 
         Gameboard gameboard = new Gameboard(15, 15, 40);
-        gameboard.placeBombs(Optional.empty());
+        gameboard.placeBombs(0, 0, Optional.empty());
         gameboard.revealCell(0,0);
         gameboard.printGameboard();
         System.out.println("is the gameboard solved?: " + gameboard.isPuzzleSolved());

@@ -78,7 +78,11 @@ export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
         return isFlagged ? 'flag' : '';
     }
 
+
+
+    //todo finish this function
     const isBomb = (row: number, col: number) => {
+        return false;
     }
 
 
