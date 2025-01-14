@@ -80,3 +80,72 @@
 
 }
 
+.game-over {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: lightcoral;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .game-over {
+        display: flex;
+        transform: scale(2);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.replay {
+    margin-top: 1rem;
+    background-color: #417003;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.replay:hover {
+    transition-duration: 500ms;
+    background-color: #8ba66e;
+}
+
+.exitGame {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 5px;
+}
+
+.exitGame:hover {
+    background-color: #dca3a3;
+    transition-duration: 500ms;
+}
+
+.endGameOptions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+

@@ -1,5 +1,6 @@
 import './Board.css';
 import {FC, useEffect, useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
 type BoardProps = {
     gameboard: string[][];
@@ -48,6 +49,7 @@ export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
 
     const [flaggedCells, setFlaggedCells] = useState<flagPlacement[]>([]);
     const [isBombCheck, setIsBombCheck] = useState(false);
+    const navigate = useNavigate();
 
 
     const flagPlacement = (row: number, col: number) => {
@@ -80,13 +82,18 @@ export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
     }
 
     const handleCellClick = (i: number, j: number) => {
-        if (styleName(gameboard[i][j]) === 'hidden' || styleName(gameboard[i][j]) === 'hidden-bomb' && !isFlag(i, j)) {
-            onCellClick(i, j);
-            if (isBomb(i, j)) {
-                console.log("You clicked on a bomb");
-                setIsBombCheck(true);
-            }
+        if (isFlag(i, j)) {
+            return;
         }
+
+        if (styleName(gameboard[i][j]) === 'hidden' || styleName(gameboard[i][j]) === 'hidden-bomb') {
+            onCellClick(i, j);
+        }
+        if (isBomb(i, j)) {
+            console.log("You clicked on a bomb");
+            setIsBombCheck(true);
+        }
+
     };
 
 
@@ -115,6 +122,16 @@ export const Board: FC<BoardProps> = ({gameboard, onCellClick}) => {
                     );
                 });
             })}
+
+            {isBombCheck && (
+                <div className="game-over">
+                    Game Over!
+
+                    <div className={'replay'} onClick={() => window.location.reload()}>Play Again</div>
+                    <div className={'exitGame'} onClick={() => navigate("/selectgamemode")}> Exit</div>
+
+                </div>
+            )}
         </div>
     );
 };

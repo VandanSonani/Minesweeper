@@ -1,6 +1,7 @@
 package com.example.minesweeperbackend.gameplay;
 
 import lombok.Getter;
+
 import java.util.Optional;
 import java.util.Random;
 
@@ -25,19 +26,19 @@ public class Gameboard {
         gameBoard = new String[rows][columns];
     }
 
-    public int getRows(){
+    public int getRows() {
         return rows;
     }
 
-    public int getColumns(){
+    public int getColumns() {
         return columns;
     }
 
-    public int getBombsCount(){
+    public int getBombsCount() {
         return bombsCount;
     }
 
-    public String[][] getGameBoard(){
+    public String[][] getGameBoard() {
         return gameBoard;
     }
 
@@ -129,6 +130,7 @@ public class Gameboard {
             }
         }
     }
+
     public boolean isPuzzleSolved() {
         // a puzzle is solved if, there are flags on all bombs OR all non bomb-cells are revealed
         int flagCount = 0;
@@ -159,6 +161,4 @@ public class Gameboard {
             System.out.println();
         }
     }
-
-
 }

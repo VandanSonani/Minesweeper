@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="exit and hover fixed">
+    <list default="true" id="3f040c4b-cf88-4aa9-a615-ba572858341d" name="Changes" comment="bombs change color and reveal all when clicked on one">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/todos.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/todos.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/websockets/WebSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/websockets/WebSocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-backend/src/main/java/com/example/minesweeperbackend/gameplay/Gameboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/components/Board/Board.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper-frontend/src/pages/GamePlay/PracticeMode/PracticeMode.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +299,7 @@
       <workItem from="1736032463777" duration="1201000" />
       <workItem from="1736117890749" duration="2767000" />
       <workItem from="1736214263370" duration="18000" />
-      <workItem from="1736217486974" duration="47947000" />
+      <workItem from="1736217486974" duration="66323000" />
     </task>
     <task id="LOCAL-00001" summary="Init backend">
       <option name="closed" value="true" />
@@ -407,7 +405,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736552343183</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="bombs change color and reveal all when clicked on one">
+      <option name="closed" value="true" />
+      <created>1736629824399</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1736629824399</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +442,8 @@
     <MESSAGE value="flag placement updates" />
     <MESSAGE value="disabled flag clicking &amp; added number images" />
     <MESSAGE value="exit and hover fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="exit and hover fixed" />
+    <MESSAGE value="bombs change color and reveal all when clicked on one" />
+    <option name="LAST_COMMIT_MESSAGE" value="bombs change color and reveal all when clicked on one" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
